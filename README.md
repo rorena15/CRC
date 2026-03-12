@@ -1,4 +1,10 @@
 # 📸 IoT Wireless Shutter Release for Canon 60D
+<div align="center">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=C%2B%2B&logoColor=white">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
+  <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white">
+  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
+</div>
 
 ESP-01S Wi-Fi 모듈과 1채널 릴레이를 활용하여 캐논(Canon) EOS 60D 카메라를 스마트폰으로 원격 제어하는 IoT 무선 릴리즈 프로젝트입니다.
 
@@ -69,16 +75,18 @@ void triggerShutter() {
 
 ## 6.앱
 #### 카메라를 원격으로 제어하기 위한 전용 안드로이드 앱. 
-- **Framework:** .NET MAUI (C#)
-- **Communication:** HTTP GET/POST Request via local Wi-Fi
+- **IDE:** Android Studio
+- **Language:** Java / Kotlin (사용하신 언어에 맞춰 수정하세요)
+- **Communication:** HTTP Request via Local Wi-Fi
 - **Features:**
-  - **Single Shot:** 즉시 촬영 모드
-  - **Focus & Release:** 반셔터 후 촬영 로직 시뮬레이션
-  - **Connection Management:** ESP-01S IP 주소 설정 및 연결 상태 확인
-
+  - **Single Shot:** 즉시 촬영 릴레이 트리거
+  - **Focus & Release:** 원격 반셔터 및 촬영 시퀀스 제어
+  - **IP Configuration:** ESP-01S 모듈과의 통신을 위한 고정 IP 설정 기능
+  
 #### App UI 및 작동 방식
-1. 앱에서 'Shutter' 버튼을 누르면 설정된 ESP-01S의 고유 IP로 HTTP 요청을 보냄.
-2. 펌웨어는 이 요청을 수신하여 릴레이를 트리거함.
+1. 안드로이드 앱에서 촬영 버튼 클릭 시, 지정된 URL(`http://[ESP_IP]/capture`)로 GET/POST 요청 전송.
+2. ESP-01S의 웹 서버가 요청을 수신하여 GPIO 0번(릴레이)을 1.5초간 가동(LOW).
+3. 60D 카메라의 One-Shot AF 로직에 의해 초점 확보 후 셔터 동작.
 
 | 로딩 화면 | 메인 화면 |
 | :---: | :---: |
