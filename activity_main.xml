@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60D PRO REMOTE"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READY"
+        android:textColor="#00FF00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"/>
+
+    <Switch
+        android:id="@+id/switchMirrorUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MIRROR LOCK-UP"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnShoot"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:backgroundTint="#E74C3C"
+        android:text="SHUTTER"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#555555"
+        android:text="STOP / CANCEL"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <EditText
+            android:id="@+id/editTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="지연 시간(초)"
+            android:textColorHint="#777"
+            android:textColor="#FFF"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/btnTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIMER START"
+            android:backgroundTint="#333"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="장수"
+            android:textColorHint="#777"
+            android:textColor="#FFF"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/editInterval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="간격(초)"
+            android:textColorHint="#777"
+            android:textColor="#FFF"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/btnTimelapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIMELAPSE"
+            android:backgroundTint="#333"/>
+    </LinearLayout>
+
+</LinearLayout>
