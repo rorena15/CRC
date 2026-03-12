@@ -1,4 +1,4 @@
-# 📸 IoT Wireless Shutter Release for Canon 60D
+# 📸 Camera Remote Controll For Cannon 60D(CRC)
 <div align="center">
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=C%2B%2B&logoColor=white">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
