@@ -68,8 +68,7 @@ void triggerShutter() {
 - 핫슈 마운트를 하우징에 통합하여 카메라 상단 장착 가능하도록 마감.
 
 ## 6.앱
-
-### 카메라를 원격으로 제어하기 위한 전용 안드로이드 앱. 
+#### 카메라를 원격으로 제어하기 위한 전용 안드로이드 앱. 
 - **Framework:** .NET MAUI (C#)
 - **Communication:** HTTP GET/POST Request via local Wi-Fi
 - **Features:**
@@ -77,17 +76,18 @@ void triggerShutter() {
   - **Focus & Release:** 반셔터 후 촬영 로직 시뮬레이션
   - **Connection Management:** ESP-01S IP 주소 설정 및 연결 상태 확인
 
-### App UI 및 작동 방식
-앱에서 'Shutter' 버튼을 누르면 설정된 ESP-01S의 고유 IP로 HTTP 요청을 보냄. 펌웨어는 이 요청을 수신하여 릴레이를 트리거함.
+#### App UI 및 작동 방식
+1. 앱에서 'Shutter' 버튼을 누르면 설정된 ESP-01S의 고유 IP로 HTTP 요청을 보냄.
+2. 펌웨어는 이 요청을 수신하여 릴레이를 트리거함.
 
 | 로딩 화면 | 메인 화면 |
 | :---: | :---: |
 | ![App Main UI]() | ![App Setting UI]() |
 > *실제 앱 스크린샷으로 교체 예정*
 
-## 6. 향후 로드맵
+## 7. 향후 로드맵
 - WIFI 환경에서의 스니핑 위협 제거를 위한 상호 인증 기능 추가
 
-## 7. 라이선스 및 작성자
+## 8. 라이선스 및 작성자
 - 작성자: rorena15
 - 분야: IT Security / IoT Embedded
